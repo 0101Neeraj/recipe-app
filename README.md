@@ -1,6 +1,6 @@
 # 🍲 Recipe Data Collection & API Development
 
-This project is built as part of the **Securin Assessment**.\
+
 It parses recipe data from JSON, stores it in a database, exposes
 RESTful APIs, and provides a **React frontend** to view, search, and
 filter recipes.

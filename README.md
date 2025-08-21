@@ -11,8 +11,7 @@ filter recipes.
 
 -   **Frontend**: React + Material UI\
 -   **Backend**: Node.js (Express)\
--   **Database**: MongoDB (can be adapted to PostgreSQL/MySQL with
-    schema provided)
+-   **Database**: Mysql
 
 ------------------------------------------------------------------------
 
@@ -55,20 +54,8 @@ filter recipes.
 
 ## 🗄️ Database Setup
 
-### MongoDB
 
-``` bash
-# Start MongoDB
-mongod
-
-# Create database
-use recipes_db
-
-# Insert parsed recipes from JSON
-node backend/scripts/importData.js
-```
-
-### PostgreSQL (Optional)
+##MySql
 
 ``` sql
 CREATE TABLE recipes (
@@ -92,8 +79,8 @@ CREATE TABLE recipes (
 ### 1. Clone Repo
 
 ``` bash
-git clone https://github.com/your-username/securin-recipes.git
-cd securin-recipes
+git clone https://github.com/0101Neeraj/recipe-app.git
+cd recipes
 ```
 
 ### 2. Backend Setup
@@ -101,7 +88,8 @@ cd securin-recipes
 ``` bash
 cd backend
 npm install
-npm start
+npm run seed
+npm start 
 ```
 
 Runs on `http://localhost:5000`
@@ -111,6 +99,8 @@ Runs on `http://localhost:5000`
 ``` bash
 cd frontend
 npm install
+npm install @emotion/react @emotion/styled
+npm install cors morgan
 npm start
 ```
 
@@ -120,7 +110,7 @@ Runs on `http://localhost:3000`
 
 ## 🛠️ API Testing
 
-You can test with **Postman** or `curl`.
+You can test with **Postman** .
 
 ### Get All Recipes
 
@@ -161,6 +151,9 @@ GET http://localhost:5000/api/recipes?page=1&limit=10
   ]
 }
 ```
+<img width="1920" height="1080" alt="Screenshot (125)" src="https://github.com/user-attachments/assets/94ee8f47-6afa-4442-a2ac-964cf860a001" />
+
+
 
 ### Search Recipes
 
@@ -175,6 +168,8 @@ GET http://localhost:5000/api/recipes/search?title=pie&rating=>=4.5
   "data": [
     {
       "id": 1,
+      "Contient": "North America",
+      "Country_State": "US",
       "title": "Sweet Potato Pie",
       "cuisine": "Southern Recipes",
       "rating": 4.8,
@@ -183,6 +178,9 @@ GET http://localhost:5000/api/recipes/search?title=pie&rating=>=4.5
   ]
 }
 ```
+
+<img width="1920" height="1080" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/d0f66c6d-c66f-441c-87d4-d22503361f3f" />
+
 
 ------------------------------------------------------------------------
 
@@ -205,9 +203,8 @@ GET http://localhost:5000/api/recipes/search?title=pie&rating=>=4.5
 
 ------------------------------------------------------------------------
 
-## 📝 Submission Notes
+<img width="1920" height="1080" alt="Screenshot (127)" src="https://github.com/user-attachments/assets/8647d39a-efff-4e35-b9c4-09953b0357ca" />
 
--   Repo is version-controlled (Git) with clean commit history\
--   Includes database schema + setup scripts\
--   API testing instructions provided\
--   Frontend + Backend setup documented
+
+
+
